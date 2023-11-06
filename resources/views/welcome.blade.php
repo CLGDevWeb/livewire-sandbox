@@ -21,6 +21,7 @@
 
             <div class="mt-16 text-white">
                 <livewire:hello-code />
+                <livewire:hello-todo />
             </div>
         </div>
     </body>
