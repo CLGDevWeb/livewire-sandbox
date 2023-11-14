@@ -16,6 +16,9 @@
                 <li>
                     <a href="{{ route('code') }}" @class(['font-semibold' => request()->routeIs('code')])>Code</a>
                 </li>
+                <li>
+                    <a href="{{ route('posts.index') }}" @class(['font-semibold' => request()->routeIs('posts.index')])>Posts</a>
+                </li>
             </ul>
         </nav>
 
