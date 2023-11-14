@@ -1,15 +1,15 @@
-<div>
+<div class="text-sm">
     <form wire:submit="addTodo">
-        <input wire:model="todo" type="text" name="todo" id="todo" class="text-gray-900" />
+        <input wire:model="todo" type="text" name="todo" id="todo" class="text-gray-900 border border-indigo-800 rounded px-1 py-0.5" />
 
-        <button type="submit" class="bg-white text-gray-900 rounded px-4">Add Todo</button>
+        <button type="submit" class="bg-indigo-800 text-white rounded px-4 py-1 ">Add Todo</button>
     </form>
 
-    <ul>
+    <ul class="mt-3">
         @forelse ($todos as $todo)
-            <li >{{ $todo }}</li>
+            <li class="list-disc list-inside">{{ $todo }}</li>
         @empty
-            <li>No todos ...</li>
+            <li class="italic">No todos ...</li>
         @endforelse
     </ul>
 </div>

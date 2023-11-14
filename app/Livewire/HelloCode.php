@@ -3,8 +3,10 @@
 namespace App\Livewire;
 
 use Carbon\Carbon;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
+#[Title('Code')]
 class HelloCode extends Component
 {
     public Carbon $today;

@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\HelloCode;
+use App\Livewire\HelloTodo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', HelloTodo::class)->name('todos');
+Route::get('/code', HelloCode::class)->name('code');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
