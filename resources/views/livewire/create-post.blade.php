@@ -1,7 +1,7 @@
 <div class="flex flex-col gap-5">
     <h2>Create Post</h2>
 
-    <form wire:submit="create" class="flex flex-col gap-3 max-w-md">
+    <form wire:submit="store" class="flex flex-col gap-3 max-w-md">
         <label for="title" class="flex flex-col gap-1">
             <span>Title</span>
             <input type="text" wire:model="title" name="title" id="title" class="text-gray-900 border border-indigo-800 rounded px-1 py-0.5">

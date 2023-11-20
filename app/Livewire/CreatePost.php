@@ -19,7 +19,7 @@ class CreatePost extends Component
     #[Rule('required|array')]
     public array $tags = [];
 
-    public function create(): void
+    public function store(): void
     {
         $validated = $this->validate();
 
