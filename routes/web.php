@@ -1,9 +1,9 @@
 <?php
 
-use App\Livewire\CreatePost;
 use App\Livewire\HelloCode;
 use App\Livewire\HelloTodo;
-use App\Livewire\PostList;
+use App\Livewire\PostCreate;
+use App\Livewire\PostIndex;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HelloTodo::class)->name('todos');
 Route::get('/code', HelloCode::class)->name('code');
-Route::get('/posts', PostList::class)->name('posts.index');
-Route::get('/posts/create', CreatePost::class)->name('posts.create');
+Route::get('/posts', PostIndex::class)->name('posts.index');
+Route::get('/posts/create', PostCreate::class)->name('posts.create');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

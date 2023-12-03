@@ -6,11 +6,11 @@ use App\Models\Post;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
-class CreatePost extends Component
+class PostCreate extends Component
 {
     public array $tagList = ['fantasy', 'science-fiction', 'horror', 'children', 'thriller', 'romance'];
 
-    #[Rule('required|string|min:2', as: 'title')]
+    #[Rule('required|string|min:2', as: 'titre')]
     public string $title = '';
 
     #[Rule('required|string|min:2', message: 'Contenu minimum requis !')]
@@ -25,11 +25,11 @@ class CreatePost extends Component
 
         Post::create($validated);
 
-        $this->redirect(route('posts.index'));
+        $this->redirect(route('posts.index'), navigate: true);
     }
 
     public function render()
     {
-        return view('livewire.create-post');
+        return view('livewire.posts.create');
     }
 }
